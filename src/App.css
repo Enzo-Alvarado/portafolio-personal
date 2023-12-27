@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contenedor-servicios {
+  height: 500px;
+  background-color: #222;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.contenedor-titulo {
+  margin: 0.3rem 0 2rem 0;
+  font-size: 15px;
+  padding: 0 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 90px 90px;
+  gap: 45px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-portafolio {
+  height: 500px;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portafolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  grid-template-rows: 1fr;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*    RESPONSIVE 1260PX   */
+
+@media screen and (max-width: 1260px) {
+  .contenedor-portafolio {
+    height: 800px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .portafolio-grid {
+    grid-template-columns: repeat(2, 280px);
+  }
+}
+
+/*    RESPONSIVE 1060PX   */
+
+@media screen and (max-width: 1060px) {
+  .contenedor-servicios {
+    height: 600px;
+  }
+
+  .servicios-grid {
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: auto;
+  }
+}
+
+/*    RESPONSIVE 700PX    */
+
+@media screen and (max-width: 700px) {
+  .contenedor-servicios {
+    height: 980px;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 300px;
+    gap: 30px;
+  }
+}
+
+/*    RESPONSIVE 604PX    */
+
+@media screen and (max-width: 604px) {
+  .contenedor-portafolio {
+    height: 1500px;
+  }
+
+  .portafolio-grid {
+    grid-template-columns: 280px;
+  }
+}
+
+/*    RESPONSIVE 489PX    */
+
+@media screen and (max-width: 489px) {
+  .contenedor-titulo {
+    padding: 0 40px;
   }
 }

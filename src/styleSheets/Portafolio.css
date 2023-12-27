@@ -1,0 +1,54 @@
+.contenedor-card-portafolio {
+  width: 250px;
+  height: 300px;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contenedor-card-portafolio a img {
+  width: 250px;
+  height: 200px;
+  top: 0;
+  opacity: 0.5;
+}
+
+.contenedor-card-portafolio a img:hover {
+  opacity: 1;
+  width: 254px;
+  height: 204px;
+  box-shadow: 0 5px 5px 0 rgb(255 255 255 / 0.2);
+}
+
+.lenguajes {
+  margin: 3px 7px;
+  font-size: 11px;
+  text-align: end;
+}
+
+.lenguajes span {
+  display: flex;
+  flex-direction: column;
+}
+
+.react:hover {
+  color: rgb(97, 219, 251);
+}
+
+.javascript:hover {
+  color: yellow;
+}
+
+.span1:hover {
+  color: red;
+}
+
+.span2:hover {
+  color: #264de4;
+}
+
+.titulo {
+  font-size: 14px;
+  margin: 0 7px;
+}

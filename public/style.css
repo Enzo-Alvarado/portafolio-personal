@@ -1,0 +1,391 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  color: #fff;
+}
+
+/*     BARRA DE NAVEGACION     */
+
+.contenedor-nav {
+  background: linear-gradient(to right, #000, #222, #444);
+  display: flex;
+  justify-content: end;
+  height: 6rem;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.nav-opciones {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1.2rem;
+}
+
+.nav-opciones a,
+.nav-opciones a li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-opciones a li:hover {
+  color: #ffa500;
+}
+
+.nav-opciones a li {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.nav-opciones a li::before,
+.nav-opciones a li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffa500; /* Color del subrayado */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-opciones a li::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-opciones a li::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.nav-opciones a li:hover::before {
+  width: 100%;
+}
+
+.abrirNav,
+.cerrarNav {
+  display: none;
+}
+
+/*      INICIO      */
+
+.contenedor-inicio {
+  height: 56rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 2;
+  background: linear-gradient(
+    to right,
+    rgba(0 0 0),
+    rgba(34 34 34),
+    rgba(68 68 68)
+  );
+}
+
+.contenedor-texto-presentacion {
+  margin: 5rem;
+}
+
+.contenedor-texto-presentacion h1 {
+  font-size: 4.4rem;
+}
+
+.contenedor-img-fondo {
+  height: 100%;
+  opacity: 0.2;
+}
+.contenedor-img-fondo img {
+  height: 100%;
+  width: 100%;
+}
+
+/*      SOBRE MI      */
+
+.contenedor-sobreMi {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50rem;
+  font-size: 1.5rem;
+  padding: 0 10rem;
+}
+
+.contenedor-texto-sobreMi h3 {
+  margin: 0.3rem 0 2rem 0;
+}
+
+.contenedor-texto-sobreMi p {
+  margin-bottom: 1rem;
+}
+
+.contenedor-img-perfil img {
+  height: 35rem;
+  width: 30rem;
+  margin-right: 2rem;
+  background-color: #141414;
+}
+
+.sobreMi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 10rem);
+  gap: 1rem;
+  background-color: #141414;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobreMi-grid div {
+  margin: 0.8rem;
+}
+
+.rating {
+  font-size: 30px;
+  color: #e58e09;
+}
+
+.rating > label {
+  display: inline-block;
+}
+
+.rating > label:before {
+  content: "★";
+}
+
+/*      CONTACTO      */
+
+.contenedor-contacto {
+  background-color: #444;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 0 10rem;
+}
+
+.contenedor-contacto h3 {
+  margin: 0.3rem 0 2rem 0;
+}
+
+.contenedor-botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contenedor-botones button {
+  margin: 4rem 2rem;
+}
+
+.contenedor-footer {
+  height: 60px;
+  background-color: #555;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-footer a {
+  text-decoration: none;
+  color: #fff;
+  margin: 2px 6px;
+  font-size: 1.2rem;
+}
+
+.contenedor-footer a:hover {
+  color: #ccc;
+}
+
+button {
+  height: 4rem;
+  width: 10rem;
+  border: none;
+  border-radius: 4rem;
+  background-color: #ffa500;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid #ff9000;
+  box-shadow: 0 5px 5px 0 #ff9000;
+}
+
+i {
+  margin-right: 3px;
+}
+
+/*    RESPONSIVE 1015PX   */
+
+@media screen and (max-width: 1015px) {
+  .sobreMi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contenedor-sobreMi {
+    height: 65rem;
+  }
+}
+
+/*    RESPONSIVE 839PX    */
+
+@media screen and (max-width: 839px) {
+  .abrirNav,
+  .cerrarNav {
+    display: block;
+    margin-top: 0.8rem;
+    background-color: transparent;
+    color: #ccc;
+    font-size: 2.2rem;
+    width: 4rem;
+  }
+
+  .abrirNav:hover,
+  .cerrarNav:hover {
+    border: none;
+    box-shadow: none;
+    color: #fff;
+  }
+
+  .abrirNav {
+    margin-right: 0.7rem;
+  }
+
+  .contenedor-nav {
+    position: fixed;
+  }
+
+  .nav-opciones {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    height: 100rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    width: 18rem;
+    padding-top: 0.8rem;
+    padding-right: 0.8rem;
+    margin-right: 0;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
+  }
+
+  .nav-opciones.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-opciones li {
+    margin-top: 0.6rem;
+  }
+
+  .contenedor-sobreMi {
+    flex-direction: column-reverse;
+    height: 98rem;
+    margin: auto;
+  }
+
+  .contenedor-img-perfil {
+    margin: 1rem;
+  }
+
+  .contenedor-img-perfil img {
+    height: 30rem;
+    width: 25rem;
+  }
+}
+
+/*    RESPONSIVE 604PX    */
+
+@media screen and (max-width: 604px) {
+  .contenedor-inicio {
+    padding-top: 8rem;
+    flex-direction: column;
+    justify-content: baseline;
+    height: 70.5rem;
+  }
+
+  .contenedor-img-fondo img {
+    height: 40rem;
+  }
+}
+
+/*    RESPONSIVE 527PX    */
+
+@media screen and (max-width: 527px) {
+  .contenedor-texto-presentacion h1 {
+    font-size: 3.5rem;
+  }
+
+  .contenedor-inicio {
+    height: 68.8rem;
+  }
+
+  .rating {
+    font-size: 15px;
+  }
+}
+
+/*    RESPONSIVE 489PX    */
+
+@media screen and (max-width: 489px) {
+  .contenedor-inicio {
+    height: 72.4rem;
+  }
+
+  .contenedor-sobreMi {
+    padding: 0 4rem;
+  }
+
+  .contenedor-contacto {
+    padding: 0 4rem;
+    height: 58rem;
+  }
+}
+
+/*    RESPONSIVE 445PX    */
+
+@media screen and (max-width: 445px) {
+  .contenedor-inicio {
+    position: relative;
+    overflow: hidden;
+    height: 70rem;
+  }
+
+  .contenedor-texto-presentacion {
+    position: relative;
+    z-index: 1;
+  }
+
+  .contenedor-img-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .contenedor-img-fondo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
