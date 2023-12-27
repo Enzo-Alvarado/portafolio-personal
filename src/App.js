@@ -65,7 +65,7 @@ function App() {
           <div className="portafolio">
             <Portafolio
               web={
-                "https://658464da727b00cd19888acd--heartfelt-gaufre-46ff81.netlify.app/"
+                "https://sitio-web-asesoramiento-enzo-alvarados-projects.vercel.app/"
               }
               url={"Asesoramiento.png"}
               nombre="Advice website"
