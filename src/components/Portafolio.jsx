@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 import "../styleSheets/Portafolio.css";
 
 function Portafolio({ web, url, nombre, leng1, leng2, leng3 }) {
@@ -8,6 +9,15 @@ function Portafolio({ web, url, nombre, leng1, leng2, leng3 }) {
       : typeof leng3 === "string" && leng3.toLowerCase().includes("react")
       ? "react"
       : "";
+
+  useEffect(() => {
+    ScrollReveal().reveal(".contenedor-card-portafolio", {
+      duration: 1100,
+      origin: "bottom",
+      distance: "40px",
+      delay: 250,
+    });
+  }, []);
 
   return (
     <div className="contenedor-card-portafolio">
